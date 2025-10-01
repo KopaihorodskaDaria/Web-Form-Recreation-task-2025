@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TC108 Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <form id="tc108-form">
+    <div class="page-frame">
+      <!-- Row 1: YEAR / BOROUGH / BLOCK / LOT / GROUP / REVIEWED BY -->
+      <div class="row-1">
+        <div class="row-1-top">
+          <div class="word-block"><span>YEAR</span></div>
+          <div class="word-block"><span>BOROUGH</span></div>
+          <div class="word-block"><span>BLOCK</span></div>
+          <div class="word-block"><span>LOT</span></div>
+          <div class="word-block"><span>GROUP #</span></div>
+          <div class="word-block"><span>REVIEWED BY</span></div>
+        </div>
+
+        <div class="row-1-bottom">
+          <div class="word-block"><span class="field-bold">2025/26</span></div>
+
+          <div class="word-block">
+            <input type="text" name="year" class="field-input w-7ch" placeholder="">
+          </div>
+          <div class="word-block">
+            <input type="text" name="boroughTop" class="field-input w-6ch" placeholder="">
+          </div>
+          <div class="word-block">
+            <input type="text" name="blockTop" class="field-input w-5ch" placeholder="">
+          </div>
+          <div class="word-block">
+            <input type="text" name="lotTop" class="field-input w-7ch" placeholder="">
+          </div>
+          <div class="word-block">
+            <input type="text" name="groupTop" class="field-input w-12ch" placeholder="">
+          </div>
+        </div>
+      </div>
+
+      <!-- Row 2: Header with logos and title -->
+      <div class="with-separator"></div>
+      <div class="row-2-header">
+        <div class="row-2-header-top">
+          <img src="logo1.png" alt="Left Logo" class="header-logo logo-left">
+
+          <div class="row-2-header-center-text">
+            <div class="line-group">
+              <strong>TAX COMMISSION OF THE CITY OF NEW YORK</strong><br>
+              <strong>1 Centre Street, Room 2400, New York, NY 10007</strong>
+            </div>
+
+            <div class="line-group">
+              <strong>APPLICATION FOR CORRECTION OF ASSESSED VALUE FOR ONE,</strong><br>
+              <strong>TWO OR THREE-FAMILY HOUSE OR OTHER CLASS ONE PROPERTY <u>ONLY</u></strong>
+            </div>
+          </div>
+
+          <img src="logo2.png" alt="Right Logo" class="header-logo logo-right">
+        </div>
+      </div>
+
+
+      <!-- Row 2: Filing instruction note -->
+      <p class="row-2-instructions-text">
+        <strong>YOUR COMPLETED FORM TC108 <u>MUST BE RECEIVED</u> BY THE NYC TAX COMMISSION AT 1 CENTRE ST., RM. 2400, NEW YORK, NY 10007 BY 5:00 P.M. MARCH 17, 2025. See Instructions “Filing TC108”.</strong>
+      </p>
+      <!-- Row 3: Notice text and options -->
+      <div class="with-separator"></div>
+      <p class="row-3-notice-text">
+          <strong>However,</strong> if you received a Revised Notice of Property Value <u>increasing</u> your assessed value</strong> 
+          or a notice of apportionment from the Dept. of Finance dated <u>after</u> February 1, 2025, 
+          you have 20 calendar days after the date of the notice to file Form TC108. 
+          Check the box next to the type of notice you received and attach a copy of the notice:
+      </p>
+      <div class="row-3-notice-options">
+          <label><input type="checkbox" name="notice_type" value="apportionment"> Apportionment notice</label>
+          <label><input type="checkbox" name="notice_type" value="increased_assessment"> Notice of increased assessment</label>
+      </div>
+      <!-- Row 4: Instructions block -->
+      <div class="with-separator"></div>
+      <div class="row-4-instructions-block">
+            <p><u>YOU CANNOT USE THIS FORM TO:</u> (i) request a change in the estimated market value, physical description
+            or building class of your property; (ii) apply for a reduction in the assessed value of a class 2, 3 or 4 property;
+            (iii) request a change in tax class; or (iv) claim an exemption.</p>
+          
+            <p><strong>READ TC600 AND ALL INSTRUCTIONS BEFORE COMPLETING THIS FORM. TYPE OR PRINT IN INK. DO NOT USE PENCIL.</strong>
+            COMPLETE ALL PARTS 1 THROUGH 10. Go to www.nyc.gov/html/taxcomm for forms and instructions.</p>
+            <p><strong><u>NEW: NONRESIDENTIAL RENTAL ACTIVITY MUST BE REPORTED ON TC201 OR TC201. See Part 7 below.</u></strong></p>
+          
+            <p><strong>NOTE:</strong> A $175 FEE applies to applications if the 2025/26 <u>assessed value</u> is $2 million or more.
+            Do NOT pay the application; it will be included in your property tax bill. See TC600 for more information about the fee. 
+            </p>
+          </div>
+          <!-- Row 5: Property Identification heading -->
+          <div class="with-separator"></div>
+          <div class="row-5">
+            <strong>1. PROPERTY IDENTIFICATION - A separate application is required for each tax lot, except for condo units.</strong>
+          </div>
+
+          <!-- Row 6: Property Identification table -->
+          <div class="with-separator"></div>
+          <table class="row-6-table">
+            <colgroup>
+              <col>
+              <col>
+              <col>
+              <col>
+            </colgroup>
+            <tr>
+              <th>BOROUGH (Bronx, Brooklyn, Manhattan, Queens or Staten Island)</th>
+              <th>BLOCK</th>
+              <th>LOT</th>
+              <th>ASSESSMENT YEAR</th>
+            </tr>
+            <tr>
+                <td><input type="text" name="borough"></td>
+                <td><input type="text" name="block"></td>
+                <td><input type="text" name="lot"></td>
+              <td class="field-bold">2025/26</td>
+            </tr>
+            
+          </table>
+          <!-- Row 7: Full address input -->
+          <div class="with-separator"></div>
+          <div class="row-7-full-address">
+            <div class="row-7-full-address-label">
+              FULL ADDRESS OF PROPERTY (INCLUDING ZIP CODE)
+            </div>
+            <input type="text" name="fullAddress" class="row-7-full-address-input">
+            <span class="field-hint">Include street address, city, state, and ZIP code</span>
+          </div>
+          <!-- Row 8: Applicant heading -->
+          <div class="with-separator"></div>
+          <div class="row-8">
+            <strong>2. APPLICANT - The Applicant must be an owner or other person directly affected by the assessment.<br>
+            An attorney or agent, other than the board of managers of a condo, cannot be the Applicant.</strong>
+          </div>
+          <div class="separator"></div>
+
+          <!-- Row 9: Applicant name -->
+          <div class="form-row row-9-inline">
+            <strong>a) APPLICANT’S NAME:</strong>
+            <input type="text" name="applicantName" class="form-input-inline">
+          </div>
+          
+          <!-- Row 9: Applicant description label -->
+          <div class="form-row">
+            <strong>b) APPLICANT DESCRIPTION (CHECK ONE):</strong>
+          </div>
+          
+          <!-- Row 9: Applicant description options -->
+          <div class="checkbox-row-9">
+            <label><input type="checkbox" name="description" value="Owner"> Owner</label>
+            <label><input type="checkbox" name="description" value="Tenant"> Tenant paying all taxes</label>
+            <label>
+              <input type="checkbox" name="description" value="Other"> Other (specify):
+              <input type="text" name="descriptionOther" class="form-input-inline">
+              (<strong>Attach TC200</strong> and documentation specified in Part 2 of TC200.)
+            </label>
+            
+            <p><strong>IF YOU DON'T SUBMIT FORM TC200, YOUR APPLICATION WILL NOT BE REVIEWED.</strong></p>
+            <label>
+              <input type="checkbox" name="description" value="CondoBoard"> Condo board of managers designated as agent for condo unit owner to contest assessment (Attach list of covered lots).
+            </label>
+          </div>
+          
+          <!-- Row 9: Source of Board’s authority -->
+          <div class="form-row board-authority-row">
+            <span>Source of Board’s authority <strong>(check one):</strong></span>
+            <label><input type="checkbox" name="boardAuthority" value="ByLaws"> By-laws</label>
+            <label><input type="checkbox" name="boardAuthority" value="Individual"> Individual authorization, valid under applicable law</label>
+            <label><input type="checkbox" name="boardAuthority" value="POA"> Power-of-Attorney</label>
+          </div>
+
+          <!-- Row 10: Contact information heading -->
+          <div class="with-separator"></div>
+          <div class="row-10">
+            3. CONTACT INFORMATION - Supply information for Representative or Applicant, if self-represented. (See Instr.)
+          </div>
+          <!-- Row 11: Contact information table -->
+          <div class="with-separator"></div>
+          <table class="table-row-11-contact" cellspacing="0" cellpadding="0">
+            <colgroup>
+              <col style="width:70%">
+              <col style="width:15%">
+              <col style="width:15%">
+            </colgroup>
+            
+            <tr>
+              <th>NAME OF INDIVIDUAL OR FIRM TO BE CONTACTED</th>
+              <th>GROUP #, IF ANY</th>
+              <th>PHONE NO.</th>
+            </tr>
+            <tr>
+              <td><input type="text" name="contactName" class="table-input"></td>
+              <td><input type="text" name="contactGroup" class="table-input"></td>
+              <td><input type="text" id="contactPhone" name="contactPhone" class="table-input" placeholder="(____)____ --- ________" maxlength="14"></td>
+            </tr>
+            <tr>
+              <td><span class="field-hint">Name of person to contact</span></td>
+              <td><span class="field-hint">Group number if applicable</span></td>
+              <td><span class="field-hint">Format: (XXX) XXX-XXXX</span></td>
+            </tr>
+            
+          </table>
+          <!-- Row 12: Mailing and email table -->
+          <div class="with-separator"></div>
+        
+          <table class="table-row-12-mailing-email" cellspacing="0" cellpadding="0">
+            <colgroup>
+              <col style="width:65%">
+              <col style="width:35%">
+            </colgroup>
+            <tr>
+                <td class="with-vertical-line">
+                  MAILING ADDRESS:
+                  <input type="text" name="mailingAddress" class="table-input">
+                  <span class="field-hint">Where correspondence should be sent</span>
+                </td>
+                <td>
+                  EMAIL ADDRESS:
+                  <input type="text" name="emailAddress" class="table-input">
+                  <span class="field-hint">For electronic correspondence</span>
+                </td>
+              </tr>
+          </table>
+          <div class="with-separator"></div>
+          <p class="indent">
+            <strong>Will an appointed Representative handle this application for the Applicant?</strong> (Check One):</strong> 
+            <label><input type="checkbox" name="willRepresentative" value="no"> No</label>
+            <label><input type="checkbox" name="willRepresentative" value="yes"> Yes</label>
+          </p>
+          <p class="indent-bottom">
+            If “Yes”, check type of Representative: 
+            <label><input type="checkbox" name="representativeType" value="attorney"> Attorney</label>
+            <label><input type="checkbox" name="representativeType" value="other"> Other (specify):</label> <input type="text" name="representativeOther" class="underline-input w-300px">
+          </p>
+          <div class="with-separator"></div>
+          <!-- Row 13: Valuation claim heading -->
+          <div class="row-13">
+            4. VALUATION CLAIM - IF YOU DO NOT FULLY COMPLETE THIS PART 4, YOUR APPLICATION WILL BE DISMISSED.
+            The Tax Commission cannot change the estimate of market value shown on your Notice of Property Value. See
+            instructions for an explanation of market value.
+          </div>
+          <div class="with-separator"></div>
+          <!-- Row 14: Market value section -->
+          <div class="row-14-market-value-section">
+            <table class="value-table">
+              <tr>
+                <td>a) Applicant's estimate of market value (what the property would sell for in the current market):</td>
+                <td>a)$ <input type="text" name="marketValue" class="line-input"></td>
+              </tr>
+              <tr>
+                <td>b) Multiply line a by 6% (.06)</td>
+                <td>b)$ <input type="text" name="calculatedValue" class="line-input"></td>
+              </tr>
+              <tr>
+                <td>c) Assessed Value (from Notice of Property Value)</td>
+                <td>c)$ <input type="text" name="assessedValue" class="line-input"></td>
+              </tr>
+            </table>
+          
+            <p class="note">
+                <strong>If line c is less than line b, DO NOT FILE TC108.</strong><br>
+              You have the right to allege an assessment ratio lower than the 6% ratio used in setting the assessment and seek a lower assessment in a
+              proceeding for judicial review. See TC600 available at:
+              <a href="https://www.nyc.gov/html/taxcomm" target="_blank">www.nyc.gov/html/taxcomm</a>.
+            </p>
+          </div>
+          <div class="with-separator"></div>
+          <!-- Row 15: Hearing request heading -->
+          <div class="row-15">
+            5. HEARING REQUEST - Check <u>one</u> box only.
+          </div>
+          <div class="with-separator"></div>
+          <!-- Row 16: Hearing request options and date received -->
+          <div class="hearing-row-16">
+            <div class="row-16-hearing-left">
+              <label><input type="checkbox"> Review on papers submitted WITHOUT an in-person hearing</label>
+              <div class="or-block"><strong>OR</strong></div>
+              <label><input type="checkbox"> In-person hearing in Manhattan</label><br>
+              <label><input type="checkbox"> Telephone hearing</label><br>
+              <label><input type="checkbox"> Video conference using Microsoft Teams</label><br>
+            </div>
+            <div class="row-16-hearing-right">
+              <div class="arrow"><input type="text" name="dateReceived" class="underline-input date-input w-100px" placeholder="MM/DD/YYYY">←</div>
+              
+              <div class="date-received">DATE RECEIVED</div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Signer initials outside the frame -->
+      <p>
+        The signer of this application must initial this page if a two-sided application form is not used. 
+        Signer’s initials: <input type="text" name="signerInitials" >
+      </p>
+
+      <!-- PAGE 4-->
+      <div class="page-frame-2">
+        <div class="row-17">
+          6. PROPERTY DESCRIPTION AS OF JANUARY 5, 2025 – Complete every item. Note: The Tax Commission cannot change
+          the physical description of your property that appears on your Notice of Property Value. See Instructions.
+        </div>
+        <div class="with-separator"></div>
+      <table class="row-18-property-description" cellspacing="0" cellpadding="0">
+        <!-- Row 1 -->
+        <tr>
+          <td>NUMBER OF KITCHENS</td>
+          <td>NUMBER OF BATHS</td>
+          <td>NUMBER OF BEDROOMS</td>
+          <td>NUMBER OF OTHER ROOMS</td>
+        </tr>
+        <tr>
+          <td><input type="text" name="kitchens" class="line-input"></td>
+          <td><input type="text" name="baths" class="line-input"></td>
+          <td><input type="text" name="bedrooms" class="line-input"></td>
+          <td><input type="text" name="otherRooms" class="line-input"></td>
+        </tr>
+        
+
+        <!-- Row 2 -->
+        <tr>
+          <td>NUMBER OF STORIES (ABOVE BASEMENT)</td>
+          <td>YEAR OF CONSTRUCTION (IF KNOWN)</td>
+          <td colspan="2">NUMBER OF PARKING SPACES ON THE PROPERTY</td>
+        </tr>
+        <tr>
+          <td><input type="text" name="stories" class="line-input"></td>
+          <td><input type="text" name="yearConstruction" class="line-input"></td>
+          <td colspan="2">
+            Indoor (garage): <input type="text" name="indoorParking" class="line-input w-50px">
+            Outdoor: <input type="text" name="outdoorParking" class="line-input w-50px">
+          </td>
+        </tr>
+
+        <!-- Row 3 -->
+        <tr>
+          <td colspan="4">YEAR AND DESCRIPTION OF LAST PHYSICAL ALTERATION OR ADDITION SINCE APPLICANT ACQUIRED THE PROPERTY</th>
+        </tr>
+        <tr>
+          <td colspan="4"><input type="text" name="lastAlteration" class="line-input w-100p"></td>
+        </tr>
+      </table>
+      <div class="with-separator"></div>
+      <div class="row-19-property-type">
+        <p>a) The property is:</p>
+        <div class="checkbox-group">
+          <div class="checkbox-inline-group">
+            <label><input type="checkbox" name="propertyType" value="1-family"> 1-family house</label>
+            <label><input type="checkbox" name="propertyType" value="2-family"> 2-family house</label>
+            <label><input type="checkbox" name="propertyType" value="3-family"> 3-family house</label>
+          </div>
+          <label><input type="checkbox" name="propertyType" value="vacant-lot"> Vacant lot zoned residential and located outside Manhattan.</label><br>
+          <label><input type="checkbox" name="propertyType" value="condo"> Class One condominium unit 
+            <strong>(A condominium board filing for unit owners must attach a schedule including a detailed physical description and condition of each unit covered by the application. Include special features and alteration data.)</strong></label><br>
+          <label>
+            <input type="checkbox" name="propertyType" value="other"> Other (describe):
+            <input type="text" name="propertyOtherDescription" class="inline-input w-150px">
+            If <strong>OTHER</strong>, enter number of residential units: 
+            <input type="text" name="residentialUnits" class="inline-input w-40px"> 
+            and number of commercial units: 
+            <input type="text" name="commercialUnits" class="inline-input w-40px">
+          </label>
+          
+        </div>
+      
+        <p>b) Is there a basement?</p>
+        <div class="checkbox-group">
+          <label><input type="checkbox" name="basement" value="no"> No</label><br>
+          <label><input type="checkbox" name="basement" value="unfinished"> Yes, unfinished space only</label><br>
+          <label><input type="checkbox" name="basement" value="finished">Yes, finished living space</label>
+      </div> 
+      <div class="with-separator"></div>
+      <div class="row-20">
+        7. NONRESIDENTIAL RENTAL ACTIVITY – THIS PART MUST BE COMPLETED
+      </div>
+      <div class="with-separator"></div>
+        <p class="rental-question-row-20">
+          Was any portion of the property rented or offered for rent for any nonresidential use (for example, commercial, retail or office use) in 2024?
+        </p>
+        <div class="rental-checkboxes">
+          <label><input type="checkbox" name="rentedNonResidential" value="no"> No</label>
+          <label><input type="checkbox" name="rentedNonResidential" value="yes"> Yes</label>
+          <span class="rental-alert-text">
+            <u>NEW:</u> IF YES, YOU MUST FILE TC201 (or TC203 for a condo board of managers).
+          </span>
+        </div>
+      <div class="with-separator"></div>
+      <div class="row-21">
+        8. SALE, CONSTRUCTION, DEMOLITION OR REFINANCING – COMPLETE ALL ITEMS. <em>Attach extra pages if needed.</em>
+      </div>
+      <div class="with-separator"></div>
+      <div class="row-22-property-sale">
+
+        <!-- a) -->
+        <p>a) Did the current owner buy this property after January 5, 2023?</p>
+        <div class="checkbox-inline-group">
+          <label><input type="checkbox" name="buyProperty" value="no"> NO</label>
+          <label><input type="checkbox" name="buyProperty" value="yes"> YES</label>
+          <span class="inline-text"><strong>IF YES</strong>: Seller's Name: <input type="text" name="sellerName" class="underline-input w-250px">
+          Closing Date: <input type="text" name="closingDate" class="underline-input date-input w-80px" placeholder="MM/DD/YYYY"> Price: $<input type="text" name="purchasePrice" class="underline-input w-100px"></span>
+          <span class="field-hint">Enter the purchase price in dollars (numbers only)</span>
+        </div>
+      
+        <!-- b) -->
+        <p>b) Has the current owner of this property signed a contract to sell it?</p>
+        <div class="checkbox-inline-group">
+          <label><input type="checkbox" name="signedContract" value="no"> NO</label>
+          <label><input type="checkbox" name="signedContract" value="yes"> YES</label>
+          <span class="inline-text"><strong>IF YES</strong>: Buyer's Name: <input type="text" name="buyerName" class="underline-input w-250px">
+          Contract Date: <input type="text" name="contractDate" class="underline-input date-input w-80px" placeholder="MM/DD/YYYY"> Price: $<input type="text" name="contractPrice" class="underline-input w-100px"></span>
+          <span class="field-hint">Enter the contract price in dollars (numbers only)</span>
+        </div>
+      
+        <!-- c) -->
+        <p>c) Is the property being offered for sale now?</p>
+        <div class="checkbox-inline-group">
+          <label><input type="checkbox" name="offering" value="no"> NO</label>
+          <label>
+            <input type="checkbox" name="offering" value="yes"> YES
+            <span class="if-yes-text">
+              <strong>IF YES</strong>, report the details of offering, including asking price: 
+              <input type="text" name="offeringDetails" class="underline-input" style="width: 300px;">
+            </span>
+          </label>
+        </div>
+        
+        <!-- d) -->
+        <p>d) Since January 5, 2023 has the property been refinanced?</p>
+        <div class="checkbox-inline-group">
+          <label><input type="checkbox" name="refinanced" value="no"> NO</label>
+          <label><input type="checkbox" name="refinanced" value="yes"> YES</label>
+          <span class="inline-text"><strong>IF YES</strong>, attach documents showing what the property was appraised at when it was refinanced.</span>
+        </div>
+      
+        <!-- e) -->
+        <p>e) Since January 5, 2023 has there been any construction, demolition or major alteration work or have plans for demolition or a new building been filed with the Buildings Dept.?</p>
+        <div class="checkbox-inline-group">
+          
+          <label>
+            <label><input type="checkbox" name="construction" value="no"> NO</label>
+            <input type="checkbox" name="construction" value="yes"> YES
+            <span class="construction-details-inline">
+              <strong>IF YES:</strong><br>
+              (1) What work was done? <input type="text" name="workDescription" class="underline-input w-300px"><br>
+              (2) Date the work started: <input type="text" name="workStartDate" class="underline-input date-input w-80px" placeholder="MM/DD/YYYY"> Date the work was, or will be, completed: <input type="text" name="workEndDate" class="underline-input date-input w-80px" placeholder="MM/DD/YYYY"><br>
+              (3) The total direct and indirect cost: $<input type="text" name="workCost" class="underline-input w-200px"><br>
+              <span class="field-hint">Include all costs: materials, labor, permits, etc.</span>
+            </span>
+          </label>
+        </div>
+
+
+
+      </div>
+      <div class="with-separator"></div>
+      <div class="row-23">
+        9. INFORMATION IN SUPPORT – <u>You must complete this part if you checked “Review on Papers” in Part 5.</u><br>
+        <label><input type="checkbox" name="salesProof"> Check here if sales or other proof of market value is provided on attached sheets.</label><br>
+        If you are requesting an in-person hearing, you may provide this information at the hearing. See instructions for
+        information on how to find comparable sales information or other evidence of market value.
+      </div>
+      <div class="with-separator"></div>
+      <div class="sale-table">
+        <div class="sale-row header">
+          <span class="sale-title">Sale 1</span>
+          <span class="sale-title">Sale 2</span>
+          <span class="sale-title">Sale 3</span>
+        </div>
+      
+        <div class="sale-row">
+          <span>Sale Date</span>
+          <input type="text" name="sale1Date" class="line-input">
+          <input type="text" name="sale2Date" class="line-input">
+          <input type="text" name="sale3Date" class="line-input">
+        </div>
+      
+        <div class="sale-row">
+          <span>Sales Price</span>
+          <input type="text" name="sale1Price" class="line-input">
+          <input type="text" name="sale2Price" class="line-input">
+          <input type="text" name="sale3Price" class="line-input">
+        </div>
+      
+        <div class="sale-row">
+          <span>Address</span>
+          <input type="text" name="sale1Address" class="line-input">
+          <input type="text" name="sale2Address" class="line-input">
+          <input type="text" name="sale3Address" class="line-input">
+        </div>
+      
+        <div class="sale-row">
+          <span>Block/lot</span>
+          <input type="text" name="sale1BlockLot" class="line-input">
+          <input type="text" name="sale2BlockLot" class="line-input">
+          <input type="text" name="sale3BlockLot" class="line-input">
+        </div>
+      
+        <div class="sale-row">
+          <span>Total dwelling units</span>
+          <input type="text" name="sale1Units" class="line-input">
+          <input type="text" name="sale2Units" class="line-input">
+          <input type="text" name="sale3Units" class="line-input">
+        </div>
+      </div>
+      
+      
+      <div class="row-25 signature-row">
+        <div class="col col-60 signature-title">
+          <strong> 10. SIGNATURE AND CERTIFICATION See Instr. and TC600 “Who May Sign”</strong>
+        </div>
+      
+        <div class="col col-13">
+          <div class="label">BOROUGH</div>
+          <input type="text" name="signatureBorough" class="underline-input signature">
+        </div>
+      
+        <div class="col col-13">
+          <div class="label">BLOCK</div>
+          <input type="text" name="signatureBlock" class="underline-input signature">
+        </div>
+      
+        <div class="col col-13">
+          <div class="label">LOT</div>
+          <input type="text" name="signatureLot" class="underline-input signature">
+        </div>
+      </div>
+      <div class="signature-section">
+
+        <p>
+          <u>This application must be signed by an individual having personal knowledge of the facts</u> who is:
+          the owner or other Applicant named in Part 2 on the first page of this application, a fiduciary such
+          as an executor, trustee or guardian, or another authorized individual acting for the Applicant.
+        </p>
+      
+        <p class="small-text">
+          a)<strong> Print clearly name of person signing:</strong>
+          <input type="text" name="signerName" class="underline-input w-400px">
+        </p>
+      
+        <p class="small-text">
+          b) The person signing is (check <u>one</u> box only):
+        </p>
+      
+        <div class="checkbox-group small-text">
+          <label><input type="checkbox" name="signerType" value="applicant"> The Applicant (check this box only if Applicant is an individual)</label><br>
+          <label class="hanging-text">
+            <input type="checkbox" name="signerType" value="fiduciary">
+            Fiduciary. Specify fiduciary's relationship to Applicant<input type="text" name="fiduciaryRelationship" class="underline-input w-250px"> 
+            <strong><u>(If this box is checked, Form TC200 may be required. See Form TC200 instructions. 
+            Write "Special Counsel Review" on the top of page 1.) </strong></u>
+            If signing as fiduciary for a corporation, partnership or LLC, enter name of entity 
+            
+            <input type="text" name="fiduciaryEntityName" class="underline-input w-300px">
+          </label>
+          <label><input type="checkbox" name="signerType" value="corporateOfficer"> An officer of a corporate Applicant. Title: 
+            <input type="text" name="corporateOfficerTitle" class="underline-input w-150px">
+          </label><br>
+          <label><input type="checkbox" name="signerType" value="condoOfficer"> An officer of the condominium board of managers. Title: 
+            <input type="text" name="condoOfficerTitle" class="underline-input w-150px">
+          </label><br>
+          <label><input type="checkbox" name="signerType" value="generalPartner"> General partner of partnership Applicant</label><br>
+          <label><input type="checkbox" name="signerType" value="llcMember"> Member or manager of, or individual officer of, LLC Applicant. 
+            Signer's Title: <input type="text" name="llcMemberTitle" class="underline-input w-150px">
+          </label><br>
+          <label><input type="checkbox" name="signerType" value="attorney"> An attorney, employee, property manager or other agent for the Applicant. 
+            <strong>(If you checked this box, a notarized Power of Attorney AND Form TC244 must be attached or your application will be dismissed.) 
+            <u>Write "Special Counsel Review" on the top of page 1.</u></strong>
+          </label>
+        </div>
+      
+        <p class="instruction-text certification">
+          <strong><u>CERTIFICATION</u> I have read this entire application before signing below, including all relevant instructions,
+          whether on this form or on another. I am personally responsible for the accuracy of the information provided on this application
+          and on all attachments, and I certify that all such information is true and correct to the best of my knowledge and belief.
+          I also understand that such information is subject to verification, is being relied upon by the City of New York and that the making
+          of any willfully false statement of material fact on this application or any attachments will subject me to the provisions of the
+          penal law relevant to the making and filing of false statements.</strong> 
+        </p>
+      
+        <p class="small-text">
+          Signature of individual named in item (a) above: <input type="text" name="signature" class="underline-input w-400px"> 
+          Date: <input type="text" name="signatureDate" class="underline-input date-input w-80px" placeholder="MM/DD/YYYY">
+        </p>
+      
+      </div>
+      
+      <!-- Form Action Buttons -->
+      <div class="form-actions">
+        <button type="button" id="saveForm" class="btn btn-save">Save Form</button>
+        <button type="button" id="importForm" class="btn btn-import">Import Form</button>
+        <input type="file" id="fileInput" accept=".json" class="hidden-file">
+      </div>
+      
+      <!-- Validation Messages -->
+      <div id="validationMessages" class="validation-messages"></div>
+    
+  </form>
+<script src="script.js"></script>
+</body>
+</html>
