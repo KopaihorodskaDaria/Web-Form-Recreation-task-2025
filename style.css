@@ -169,7 +169,7 @@ body {
   .row-20,
   .row-21,
   .row-23 {
-    background-color: hwb(0 64% 35%);
+    background-color: lch(82.64% 1.09 18.97);
     padding: 4px 8px;
     margin: 0 -5px; 
     font-size: 21px; /* Match TC108 instruction text size */
@@ -435,7 +435,7 @@ body {
   
   .row-16-hearing-right {
     flex: 1;              /* take remaining width */
-    background-color: hwb(0 64% 35%); /* gray panel */
+    background-color: lch(82.64% 1.09 18.97); /* gray panel */
     margin-right: -5px;   /* bleed to frame edge */
     margin-bottom: -5px;  /* bleed to bottom edge */
     padding: 4px 9px ; /* inner spacing */
@@ -724,7 +724,7 @@ padding: 5px; /* inner spacing from the frame edge */
 
 .col-60 {
   flex: 0 0 60%;
-  background-color: hwb(0 64% 35%);
+  background-color: lch(82.64% 1.09 18.97);
   display: flex;
   align-items: center;
   padding: 2px 5px;
